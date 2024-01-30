@@ -5,7 +5,6 @@ export const ListExperience = ({experiences}) => {
     let hauteur = 1;
     let hauteurPhone = 1;
     let hauteurMore = 1;
-    let hauteurPhoneMore = 1;
 
     const renderExperience = (experience) => {
         return (
@@ -26,17 +25,15 @@ export const ListExperience = ({experiences}) => {
             {experiences.map((experience) => {
                 if(experience.id % 2 === 0) {
                     hauteur++;
-                    hauteurPhone++;
                     hauteurMore = hauteur-1;
-                    hauteurPhoneMore = hauteurPhone-1;
+                    // second column
                     return (
-                        <div key={experience.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteur +` lg:col-start-2`}>
+                        <div key={experience.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteurMore +` lg:col-start-2`}>
                             {renderExperience(experience)}
                         </div>
                     )
                 } else {
-                    hauteurPhone++;
-                    hauteurPhoneMore = hauteurPhone-1;
+                    // first column
                     return (
                         <div key={experience.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteur}>
                             {renderExperience(experience)}

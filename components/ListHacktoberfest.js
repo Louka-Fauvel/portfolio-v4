@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export const ListVeille = ({veilles}) => {
+export const ListHacktoberfest = ({hacktoberfests}) => {
 
     let hauteur = 1;
     let hauteurMore = 1;
 
-    const renderVeille = (veille) => {
+    const renderHacktoberfest = (hacktoberfest) => {
         return (
             <div className="space-y-2">
-                <Image src={veille.img} width={200} height={200} alt={veille.title} className="p-2 bg-white rounded-lg"></Image>
-                <h3 className="text-xl md:text-2xl">{veille.title}</h3>
-                <p className="py-2"><span className="p-2 bg-red-600 rounded-lg">{veille.date}</span></p>
-                {veille.infos.map((info) => {
+                <Image src={hacktoberfest.img} width={200} height={200} alt={hacktoberfest.title} className="p-2 bg-white rounded-lg"></Image>
+                <h3 className="text-xl md:text-2xl">{hacktoberfest.title}</h3>
+                <p className="py-2"><span className="p-2 bg-red-600 rounded-lg">{hacktoberfest.date}</span></p>
+                {hacktoberfest.infos.map((info) => {
                     if(info.p) {
                         return (
                             <p key={info.id}>
@@ -67,21 +67,21 @@ export const ListVeille = ({veilles}) => {
 
     return (
         <div className="mt-5 grid grid-rows-1 grid-flow-col lg:grid-cols-2 gap-2">
-            {veilles.map((veille) => {
-                if(veille.id % 2 === 0) {
+            {hacktoberfests.map((hacktoberfest) => {
+                if(hacktoberfest.id % 2 === 0) {
                     hauteur++;
                     hauteurMore = hauteur-1;
                     // second column
                     return (
-                        <div key={veille.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteurMore +` lg:col-start-2`}>
-                            {renderVeille(veille)}
+                        <div key={hacktoberfest.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteurMore +` lg:col-start-2`}>
+                            {renderHacktoberfest(hacktoberfest)}
                         </div>
                     )
                 } else {
                     // first column
                     return (
-                        <div key={veille.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteur}>
-                            {renderVeille(veille)}
+                        <div key={hacktoberfest.id} className={`mb-5 p-8 border-4 border-red-600 bg-gray-800 rounded-3xl col-start-1 lg:row-start-`+ hauteur}>
+                            {renderHacktoberfest(hacktoberfest)}
                         </div>
                     )
                 }

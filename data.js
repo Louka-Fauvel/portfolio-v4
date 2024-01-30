@@ -1,26 +1,39 @@
-export const formations = [
+export const diplomes = [
     {
         "id": 1,
         "img": "/img/supavenir.png",
         "title": "BTS SIO - CaenSup Sainte-Ursule",
         "date": "2020 - 2023",
         "country": "Caen, Normandie",
-        "languagesTools": "HTML/CSS, PHP, Framework (Bootstrap, Semantic UI, Fomantic UI, Next.js), " +
-            "Spring Boot, Ubiquity, Python, SQL, Javascript, JAVA, Flutter Dart",
-        "concepts": "Algorithmique, POO, méthode Merise"
+        "languagesTools": "HTML/CSS, PHP, Python, SQL, Javascript, JAVA, " +
+            "Framework (Bootstrap, Semantic UI, Fomantic UI, Ant Design), Spring Boot, Ubiquity, Flutter Dart et Next.js",
+        "concepts": "Algorithmie, POO, méthode Merise"
     },
     {
         "id": 2,
         "img": "/img/lemonnier.jpg",
-        "title": "Terminale STI2D SIN, section Euro - Institut Lemonnier",
-        "date": "2018 - 2021",
+        "title": "Bac STI2D SIN, mention Européenne - Institut Lemonnier",
+        "date": "Juin 2020",
         "country": "Caen, Normandie",
         "languagesTools": "Arduino, Labview",
         "concepts": ""
     }
 ]
 
-export const experience = [
+export const certForms = [
+    {
+        "id": 1,
+        "img": "/img/certifications.png",
+        "title": "Les certifications",
+    },
+    {
+        "id": 2,
+        "img": "/img/formations.png",
+        "title": "Les formations",
+    }
+]
+
+export const experiences = [
     {
         "id": 1,
         "img": "/img/fime_logo.png",
@@ -41,9 +54,8 @@ export const experience = [
         "date": "Décembre 2021 - Février 2022",
         "weeks": "7 semaines",
         "country": "Caen, Normandie",
-        "description": "Découverte et utilisation du Wlangage avec le logiciel WEBDEV 25 et WEBDEV 27 " +
-            "à travers différents projets de l'entreprise.",
-        "languagesTools": "Wlangage",
+        "description": "Découverte et utilisation du Wlangage à travers différents projets de l'entreprise.",
+        "languagesTools": "Wlangage (WEBDEV 25 et 27)",
         "languages": "",
         "tools": ""
     },
@@ -64,6 +76,21 @@ export const experience = [
     },
     {
         "id": 4,
+        "img": "/img/corlet.png",
+        "title": "Corlet : Agence de communication",
+        "date": "Janvier 2017",
+        "weeks": "1 semaine",
+        "country": "Caen, Normandie",
+        "description": "Observation du travail d'un graphiste. Utilisation des outils du graphiste pour créer des images.",
+        "languagesTools": "",
+        "languages": "",
+        "tools": "Adobe Photoshop"
+    }
+]
+
+export const experienceserasmus = [
+    {
+        "id": 1,
         "img": "/img/erasmus.png",
         "title": "ERASMUS + : Institut Lemonnier",
         "date": "Octobre 2019",
@@ -78,7 +105,7 @@ export const experience = [
         "tools": ""
     },
     {
-        "id": 5,
+        "id": 2,
         "img": "/img/erasmus.png",
         "title": "ERASMUS + : Institut Lemonnier",
         "date": "Mars 2019",
@@ -91,18 +118,6 @@ export const experience = [
         "languages": "Anglais",
         "tools": "Adobe Premiere Pro"
     },
-    {
-        "id": 6,
-        "img": "/img/corlet.png",
-        "title": "Corlet : Agence de communication",
-        "date": "Janvier 2017",
-        "weeks": "1 semaine",
-        "country": "Caen, Normandie",
-        "description": "Observation du travail d'un graphiste. Utilisation des outils du graphiste pour créer des images.",
-        "languagesTools": "",
-        "languages": "",
-        "tools": "Adobe Photoshop"
-    }
 ]
 
 export const veilles = [
@@ -770,9 +785,12 @@ export const veilles = [
                 ],
             }
         ]
-    },
+    }
+]
+
+export const hacktoberfests = [
     {
-        "id": 4,
+        "id": 1,
         "img": "/img/hacktoberfest2021.png",
         "title": "Hacktoberfest 2021",
         "date": "Octobre 2021",
@@ -802,7 +820,7 @@ export const veilles = [
         ]
     },
     {
-        "id": 5,
+        "id": 2,
         "img": "/img/hacktoberfest2019.png",
         "title": "Hacktoberfest 2019",
         "date": "Octobre 2019",
@@ -836,68 +854,180 @@ export const veilles = [
 export const projets = [
     {
         "id": 1,
+        "group": "perso",
         "route": "sitepersos",
-        "img": "",
-        "title": "Mes sites web personnels",
-        "date": "",
-        "objective": "",
-        "languagesTools": "",
-        "websiteHref": "",
-        "githubHref": ""
+        "img": "/img/portfolio3.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "video": "",
+        "title": "Mon portfolio - Les précédentes versions",
+        "date": "2020 - 2023",
+        "objective": "Réaliser un portfolio pour me présenter et montrer mes compétences en développement web.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "Portfolio-v4 : HTML, CSS, JavaScript, Framework (Tailwind CSS) et Next.js"
+            },
+            {
+                "id": 2,
+                "text": "Portfolio-v3 : HTML, CSS, PHP, JavaScript, Framework (Fomantic-UI) et Ubiquity"
+            },
+            {
+                "id": 3,
+                "text": "Siteperso2 : HTML, CSS, PHP, JavaScript et Framework (Bootstrap)"
+            },
+            {
+                "id": 4,
+                "text": "Siteperso : HTML, CSS, PHP et Framework (FontAwesome)"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": [
+            {
+                "id": 1,
+                "href": "",
+                "text": "Portfolio-v4"
+            },
+            {
+                "id": 2,
+                "href": "",
+                "text": "Portfolio-v3"
+
+            },
+            {
+                "id": 3,
+                "href": "",
+                "text": "Siteperso2"
+            },
+            {
+                "id": 4,
+                "href": "",
+                "text": "Siteperso"
+            }
+        ]
     },
     {
         "id": 2,
+        "group": "school",
         "route": "planitpoker",
         "img": "/img/planitpoker_logo.png",
-        "title": "PlanitPoker",
+        "sizeImg1": 250,
+        "sizeImg2": 500,
+        "video": "",
+        "title": "Next.js - PlanitPoker",
         "date": "Mars - Juin 2023",
         "objective": "Créer un PlanitPoker, un outil pour estimer les tâches d'un projet d'une équipe à l'aide de carte à jouer.",
-        "languagesTools": "JavaScript, PHP, Framework (Next.js, Ant Design), Ubiquity",
-        "websiteHref": "",
-        "githubHref": "https://github.com/supavenir/planitPoker-LaJavanaise"
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "JavaScript, PHP, Framework (Next.js, Ant Design) et Ubiquity"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": [
+            {
+                "id": 1,
+                "href": "https://github.com/supavenir/planitPoker-LaJavanaise",
+                "text": "PlanitPoker"
+            }
+        ]
     },
     {
         "id": 3,
+        "group": "school",
         "route": "proxmox-admin",
         "img": "/img/proxmox-admin.jpg",
-        "title": "Proxmox-admin",
-        "date": "",
-        "objective": "",
-        "languagesTools": "",
-        "websiteHref": "",
-        "githubHref": ""
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "video": "",
+        "title": "Ubiquity - Proxmox-admin",
+        "date": "Décembre 2021 - Mars 2022",
+        "objective": "Le projet Proxmox-admin est une application qui permet la gestion simplifiée et à distance de serveurs, groupes et VMs proxmox.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "HTML, PHP, CSS, JavaScript, Framework (Semantic UI) et Ubiquity"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": [
+            {
+                "id": 1,
+                "href": "https://github.com/Nathannicolle/proxmox-admin",
+                "text": "Proxmox-admin"
+            }
+        ]
     },
     {
         "id": 4,
+        "group": "tuto",
         "route": "webpoo",
         "img": "/img/webpoo.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "video": "https://www.youtube-nocookie.com/embed/LMfGrRpgTtk",
         "title": "WebPOO",
-        "date": "",
-        "objective": "",
-        "languagesTools": "",
-        "websiteHref": "",
-        "githubHref": ""
+        "date": "Avril - Mai 2021",
+        "objective": "Réaliser un réseau social pour des étudiants.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "HTML, PHP, CSS, Framework (Bootstrap) et Adobe Premiere Pro"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": [
+            {
+                "id": 1,
+                "href": "https://github.com/Louka-Fauvel/WebPOO",
+                "text": "WebPOO"
+            }
+        ]
     },
     {
         "id": 5,
+        "group": "tuto",
         "route": "keepass",
         "img": "/img/keepass_logo.png",
+        "sizeImg1": 250,
+        "sizeImg2": 500,
+        "video": "https://www.youtube-nocookie.com/embed/pJ5LMMZXM0s",
         "title": "KeePass",
-        "date": "",
-        "objective": "",
-        "languagesTools": "",
-        "websiteHref": "",
-        "githubHref": ""
+        "date": "Janvier 2021",
+        "objective": "Réaliser un tuto vidéo sur KeePass.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "KeePass et Adobe Premiere Pro"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": []
     },
     {
         "id": 6,
+        "group": "school",
         "route": "refonte-site-artiste",
         "img": "/img/refonte-site-artiste.png",
-        "title": "Refonte-Site-Artiste",
-        "date": "",
-        "objective": "",
-        "languagesTools": "",
-        "websiteHref": "",
-        "githubHref": ""
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "video": "",
+        "title": "Wordpress - Refonte-Site-Artiste",
+        "date": "décembre 2020",
+        "objective": "Améliorer le site professionnel de Michèle Ratel.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "Wordpress, Thème (NatureSpace) et Plugin (WPForms Lite et Envira Gallery)"
+            }
+        ],
+        "websiteHrefs": [],
+        "githubHrefs": [
+            {
+                "id": 1,
+                "href": "https://github.com/Louka-Fauvel/Refonte-Site-Artiste",
+                "text": "Refonte-Site-Artiste"
+            }
+        ]
     }
 ]

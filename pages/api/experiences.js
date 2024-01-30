@@ -1,5 +1,5 @@
-import {experience} from "@/data";
+import {experiences} from "@/data";
 
 export default function handler(req, res) {
-  res.status(200).json(experience)
+  res.status(200).json(experiences)
 }
