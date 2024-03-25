@@ -9,10 +9,6 @@ async function getData() {
 
     let URL = process.env.URL;
 
-    if(!process.env.URL) {
-        URL = null;
-    }
-
     const resCertForms = await fetch(URL+'/api/certForms', { next: { revalidate: 10 } });
     const certForms = await resCertForms.json();
 

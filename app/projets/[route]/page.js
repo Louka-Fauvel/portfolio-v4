@@ -23,10 +23,6 @@ async function getData(route) {
 
     let URL = process.env.URL;
 
-    if(!process.env.URL) {
-        URL = null;
-    }
-
     const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
     const projets = await resProjets.json()
     const projet = projets.find((theProjet) => theProjet.route === route);

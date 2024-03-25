@@ -14,10 +14,6 @@ async function getData() {
 
     let URL = process.env.URL;
 
-    if(!process.env.URL) {
-        URL = null;
-    }
-
     const resDiplomes = await fetch(URL+'/api/diplomes', { next: { revalidate: 10 } });
     const diplomes = await resDiplomes.json();
     diplomes.sort((a, b) => b.id - a.id);
