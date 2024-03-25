@@ -9,6 +9,7 @@ export const metadata = {
 export async function generateStaticParams() {
 
     const URL = process.env.URL;
+    console.log(URL);
 
     const resProjets = await fetch(URL+'/api/projets');
     const projets = await resProjets.json();
@@ -38,8 +39,8 @@ const listImgs = (imgs) => {
         <div className="grid grid-cols-4 md:grid-cols-8 justify-items-center">
             {imgs.map((img) => {
                 return (
-                    <div className="mt-auto mb-auto">
-                        <Image key={img.id} src={img.img} width={img.sizeImg} height={img.sizeImg} alt={img.alt} style={{objectFit:"contain"}}/>
+                    <div key={img.id} className="mt-auto mb-auto">
+                        <Image src={img.img} width={img.sizeImg} height={img.sizeImg} alt={img.alt} style={{objectFit:"contain"}}/>
                     </div>
                 );
             })}
@@ -115,10 +116,10 @@ export default async function Page({ params }) {
                             <h2 className="text-2xl md:text-4xl">Langages et Outils utilisés :</h2>
                             <div className="py-4 space-y-2">
                                 {projet.listLanguagesTools.map((languagesTools) => (
-                                    <>
-                                        <p key={languagesTools.id}>{languagesTools.text}</p>
+                                    <div key={languagesTools.id}>
+                                        <p>{languagesTools.text}</p>
                                         {languagesTools.languagesTools.length > 0 && listImgs(languagesTools.languagesTools)}
-                                    </>
+                                    </div>
                                 ))}
                             </div>
                         </div>
