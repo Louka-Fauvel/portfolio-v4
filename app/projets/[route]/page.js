@@ -9,11 +9,10 @@ export const metadata = {
 export async function generateStaticParams() {
 
     const URL = process.env.URL;
-    console.log(URL);
 
     const resProjets = await fetch(URL+'/api/projets');
     const projets = await resProjets.json();
-
+    console.log(projets);
     return projets.map((projet) => ({
         route: projet.route,
     }))
