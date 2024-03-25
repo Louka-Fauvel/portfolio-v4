@@ -10,9 +10,9 @@ export async function generateStaticParams() {
 
     const URL = process.env.URL;
 
-    const resProjets = await fetch(URL+'/api/projets');
+    const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
     const projets = await resProjets.json();
-    console.log(projets);
+
     return projets.map((projet) => ({
         route: projet.route,
     }))
