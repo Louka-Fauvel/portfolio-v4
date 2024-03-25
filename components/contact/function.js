@@ -2,7 +2,7 @@
 
 import { sendContactForm } from "./lib/api";
 
-export async function handleSubmit(event) {
+export async function handleSubmit(event, CAPTCHAID) {
     event.preventDefault();
     const formData = {
         prenom: event.target.prenom.value,
@@ -11,7 +11,7 @@ export async function handleSubmit(event) {
         message: event.target.message.value
     }
     if (formData.prenom != "" && formData.nom != "" && formData.email != "" && formData.message != "") {
-        await captchaGeeTest(formData, event);
+        await captchaGeeTest(formData, event, CAPTCHAID);
     }
 }
 
@@ -50,9 +50,7 @@ export const captchaVerify = () => {
     }
 }
 
-export const captchaGeeTest = async (formData, event) => {
-
-    const CAPTCHAID = process.env.CAPTCHAID;
+export const captchaGeeTest = async (formData, event, CAPTCHAID) => {
 
     initGeetest4(
         {
@@ -72,7 +70,6 @@ export const captchaGeeTest = async (formData, event) => {
                 })
                 .onSuccess(async function () {
                     // your code, please reset the CAPTCHA based on you business
-                    //console.log("Test2");
                     //document.getElementById("contactForm").disabled = false;
                     await sendContactForm(formData);
                     event.target.reset();

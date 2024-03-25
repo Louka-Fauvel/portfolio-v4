@@ -1,10 +1,20 @@
-import { handleSubmit } from "@/components/contact/function";
+import { FormContact } from "@/components/contact/FormContact";
 import { GithubSVG, LinkedinSVG } from "@/components/svgs";
 import Link from "next/link";
 
 export const metadata = {
     title: "Contact - Louka Fauvel",
     description: "Contact de Louka Fauvel",
+}
+
+async function getData() {
+
+    const CAPTCHAID = process.env.CAPTCHAID;
+
+    return {
+        CAPTCHAID,
+    }
+
 }
 
 export default async function Page() {
@@ -24,59 +34,15 @@ export default async function Page() {
         <p onClick={captchaVerify} className="block w-full p-2 bg-red-500 rounded-lg text-center select-none cursor-pointer hover:bgColorRed">Valider le Captcha</p>
     </div>*/
 
+    const CAPTCHAID = (await getData()).CAPTCHAID;
+
     return (
         <>
             <div className="md:container md:mx-auto px-5 md:px-32 lg:px-48">
                 <div className="mt-16">
                     <h1 className="text-2xl md:text-4xl">Contact</h1>
                     <div className="mt-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl">
-                        <form onSubmit={handleSubmit}>
-                            <div className="grid grid-rows-1 grid-flow-col lg:grid-cols-2 gap-2">
-                                <div className="col-start-1 lg:row-start-1">
-                                    <label className="block ">Prénom :</label>
-                                    <input
-                                        type="text"
-                                        className="block w-full p-2 border-2 border-gray-800 rounded-lg bg-gray-700 focus:outline-none focus:border-red-600"
-                                        placeholder="Votre prénom"
-                                        name="prenom"
-                                        required
-                                    />
-                                </div>
-                                <div className="col-start-1 lg:row-start-1 lg:col-start-2">
-                                    <label className="block ">Nom :</label>
-                                    <input
-                                        type="text"
-                                        className="block w-full p-2 border-2 border-gray-800 rounded-lg bg-gray-700 focus:outline-none focus:border-red-600"
-                                        placeholder="Votre nom"
-                                        name="nom"
-                                        required
-                                    />
-                                </div>
-                                <div className="col-start-1 lg:row-start-2 lg:col-span-2">
-                                    <label className="block ">Email :</label>
-                                    <input
-                                        type="email"
-                                        className="block w-full p-2 border-2 border-gray-800 rounded-lg bg-gray-700 focus:outline-none focus:border-red-600"
-                                        placeholder="Votre email"
-                                        name="email"
-                                        required
-                                    />
-                                </div>
-                                <div className="col-start-1 lg:row-start-3 lg:col-span-2">
-                                    <label className="block ">Message :</label>
-                                    <textarea
-                                        className="block w-full p-2 border-2 border-gray-800 rounded-lg bg-gray-700 focus:outline-none focus:border-red-600"
-                                        rows="5"
-                                        placeholder="Votre message"
-                                        name="message"
-                                        required
-                                    ></textarea>
-                                </div>
-                                <div className="col-start-1 lg:row-start-6 lg:col-span-2">
-                                    <button id="contactForm" className="block w-full p-2 bg-red-500 rounded-lg hover:bgColorRed disabled:opacity-50 disabled:hover:bg-red-500">Envoyer</button>
-                                </div>
-                            </div>
-                        </form>
+                        <FormContact CAPTCHAID={CAPTCHAID}/>
                     </div>
                     <div className="mt-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl">
                         <h2 className="text-xl md:text-2xl">Coordonnées :</h2>
