@@ -6,7 +6,7 @@ export const metadata = {
     description: "Projet de Louka Fauvel",
 }
 
-export async function generateStaticParams() {
+/*export async function generateStaticParams() {
 
     const URL = process.env.URL;
 
@@ -17,13 +17,13 @@ export async function generateStaticParams() {
         route: projet.route,
     }))
 
-}
+}*/
 
 async function getData(route) {
 
     const URL = process.env.URL;
 
-    const resProjets = await fetch(URL+'/api/projets/', { next: { revalidate: 10 } });
+    const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
     const projets = await resProjets.json()
     const projet = projets.find((theProjet) => theProjet.route === route);
 
