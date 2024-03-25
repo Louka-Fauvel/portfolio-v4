@@ -1,7 +1,7 @@
 
 export const sendContactForm = async (data) => {
     
-    let URL = process.env.URL;
+    const URL = process.env.URL;
 
     await fetch(URL+'/api/contact', {
         method: 'POST',

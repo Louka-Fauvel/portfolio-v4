@@ -7,10 +7,18 @@ export const metadata = {
 
 async function getData() {
 
-    let URL = process.env.URL;
+    const URL = process.env.URL;
 
-    const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
-    const projets = await resProjets.json();
+    let letProjets = [];
+
+    if(URL) {
+
+        const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
+        letProjets = await resProjets.json();
+        
+    }
+
+    const projets = await letProjets;
     projets.sort((a, b) => b.id - a.id);
     let n = 1;
     const groupPro = projets.filter((theProjet) => {

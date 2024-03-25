@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export const metadata = {
     title: "Projet - Louka Fauvel",
@@ -21,10 +22,18 @@ export const metadata = {
 
 async function getData(route) {
 
-    let URL = process.env.URL;
+    const URL = process.env.URL;
 
-    const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
-    const projets = await resProjets.json()
+    let letProjets = [];
+
+    if(URL) {
+
+        const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
+        letProjets = await resProjets.json();
+        
+    }
+
+    const projets = await letProjets
     const projet = projets.find((theProjet) => theProjet.route === route);
 
     return {
@@ -50,6 +59,10 @@ const listImgs = (imgs) => {
 export default async function Page({ params }) {
 
     const projet = (await getData(params.route)).projet;
+
+    if (!projet) {
+        notFound();
+    }
 
     return (
         <>

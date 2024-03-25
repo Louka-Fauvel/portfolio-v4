@@ -12,25 +12,47 @@ export const metadata = {
 
 async function getData() {
 
-    let URL = process.env.URL;
+    const URL = process.env.URL;
 
-    const resDiplomes = await fetch(URL+'/api/diplomes', { next: { revalidate: 10 } });
-    const diplomes = await resDiplomes.json();
+    let letDiplomes = [];
+    let letTableCerts = [];
+    let letExperiences = [];
+    let letExperiencesErasmus = [];
+    let letVeilles = [];
+    let letHacktoberfests = [];
+
+    if(URL) {
+        
+        const resDiplomes = await fetch(URL+'/api/diplomes', { next: { revalidate: 10 } });
+        letDiplomes = await resDiplomes.json();
+        const resTableCerts = await fetch(URL+'/api/tableCerts', { next: { revalidate: 10 } });
+        letTableCerts = await resTableCerts.json();
+        const resExperiences = await fetch(URL+'/api/experiences', { next: { revalidate: 10 } });
+        letExperiences = await resExperiences.json();
+        const resExperiencesErasmus = await fetch(URL+'/api/experienceserasmus', { next: { revalidate: 60 } });
+        letExperiencesErasmus = await resExperiencesErasmus.json();
+        const resVeilles = await fetch(URL+'/api/veilles', { next: { revalidate: 60 } });
+        letVeilles = await resVeilles.json();
+        const resHacktoberfests = await fetch(URL+'/api/hacktoberfests', { next: { revalidate: 60 } });
+        letHacktoberfests = await resHacktoberfests.json();
+    }
+
+    const diplomes = await letDiplomes;
     diplomes.sort((a, b) => b.id - a.id);
-    const resTableCerts = await fetch(URL+'/api/tableCerts', { next: { revalidate: 10 } });
-    const tableCerts = await resTableCerts.json();
+
+    const tableCerts = await letTableCerts;
     tableCerts.sort((a, b) => b.id - a.id);
-    const resExperiences = await fetch(URL+'/api/experiences', { next: { revalidate: 10 } });
-    const experiences = await resExperiences.json();
+
+    const experiences = await letExperiences;
     experiences.sort((a, b) => b.id - a.id);
-    const resExperiencesErasmus = await fetch(URL+'/api/experienceserasmus', { next: { revalidate: 60 } });
-    const experiencesErasmus = await resExperiencesErasmus.json();
+
+    const experiencesErasmus = await letExperiencesErasmus;
     experiences.sort((a, b) => b.id - a.id);
-    const resVeilles = await fetch(URL+'/api/veilles', { next: { revalidate: 60 } });
-    const veilles = await resVeilles.json();
+
+    const veilles = await letVeilles;
     veilles.sort((a, b) => b.id - a.id);
-    const resHacktoberfests = await fetch(URL+'/api/hacktoberfests', { next: { revalidate: 60 } });
-    const hacktoberfests = await resHacktoberfests.json();
+
+    const hacktoberfests = await letHacktoberfests;
     hacktoberfests.sort((a, b) => b.id - a.id);
 
     return {

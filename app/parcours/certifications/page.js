@@ -7,10 +7,18 @@ export const metadata = {
 
 async function getData() {
 
-    let URL = process.env.URL;
+    const URL = process.env.URL;
 
-    const resCertForms = await fetch(URL+'/api/certForms', { next: { revalidate: 10 } });
-    const certForms = await resCertForms.json();
+    let letCertForms = [];
+
+    if(URL) {
+
+        const resCertForms = await fetch(URL+'/api/certForms', { next: { revalidate: 10 } });
+        letCertForms = await resCertForms.json();
+        
+    }
+
+    const certForms = await letCertForms;
 
     return {
         certForms,
