@@ -21,9 +21,13 @@ export const metadata = {
 
 async function getData(route) {
 
-    const URL = process.env.URL;
+    let URL = process.env.URL;
 
-    const resProjets = await fetch('/api/projets', { next: { revalidate: 10 } });
+    if(!process.env.URL) {
+        URL = null;
+    }
+
+    const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
     const projets = await resProjets.json()
     const projet = projets.find((theProjet) => theProjet.route === route);
 
