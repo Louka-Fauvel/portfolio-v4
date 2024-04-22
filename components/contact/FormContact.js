@@ -3,10 +3,10 @@
 import { handleSubmit } from "./function";
 
 
-export const FormContact = ({CAPTCHAID}) => {
+export const FormContact = ({CAPTCHAID, URL}) => {
 
     return (
-        <form onSubmit={(event) => handleSubmit(event, CAPTCHAID)}>
+        <form onSubmit={(event) => handleSubmit(event, CAPTCHAID , URL)}>
             <div className="grid grid-rows-1 grid-flow-col lg:grid-cols-2 gap-2">
                 <div className="col-start-1 lg:row-start-1">
                     <label className="block ">Prénom :</label>

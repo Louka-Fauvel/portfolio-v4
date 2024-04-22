@@ -10,9 +10,11 @@ export const metadata = {
 async function getData() {
 
     const CAPTCHAID = process.env.CAPTCHAID;
+    const URL = process.env.URL;
 
     return {
         CAPTCHAID,
+        URL,
     }
 
 }
@@ -34,7 +36,7 @@ export default async function Page() {
         <p onClick={captchaVerify} className="block w-full p-2 bg-red-500 rounded-lg text-center select-none cursor-pointer hover:bgColorRed">Valider le Captcha</p>
     </div>*/
 
-    const CAPTCHAID = (await getData()).CAPTCHAID;
+    const {CAPTCHAID, URL} = (await getData());
 
     return (
         <>
@@ -42,7 +44,7 @@ export default async function Page() {
                 <div className="mt-16">
                     <h1 className="text-2xl md:text-4xl">Contact</h1>
                     <div className="mt-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl">
-                        <FormContact CAPTCHAID={CAPTCHAID}/>
+                        <FormContact CAPTCHAID={CAPTCHAID} URL={URL}/>
                     </div>
                     <div className="mt-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl">
                         <h2 className="text-xl md:text-2xl">Coordonnées :</h2>
