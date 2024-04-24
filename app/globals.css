@@ -30,6 +30,13 @@ body {
   rgb(var(--background-start-rgb));
 }
 
+.page-404 {
+  background-image: url("/img/logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .image-fond {
   background-image: url("/img/fond.jpg");
   background-size: cover;

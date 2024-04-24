@@ -1,3 +1,255 @@
+export const listAcc = [
+    {
+        "id": 1,
+        "img": "/img/certifications.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "title": "Compétences",
+        "route": "/competences",
+    },
+    {
+        "id": 2,
+        "img": "/img/certifications.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "title": "Certifications",
+        "route": "/parcours/certifications",
+    },
+    {
+        "id": 3,
+        "img": "/img/certifications.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "title": "Parcours",
+        "route": "/parcours",
+    },
+    {
+        "id": 4,
+        "img": "/img/certifications.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "title": "Projets",
+        "route": "/projets",
+    },
+    {
+        "id": 5,
+        "img": "/img/certifications.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "title": "Centres d'intérêts",
+        "route": "",
+        "infos": [
+            {
+                "id": 1,
+                "className": "inline-block",
+                "div": [
+                    {
+                        "id": 1,
+                        "className": "mt-5 text-xl md:text-2xl typewriter-18",
+                        "h2": "Centres d'intérêts",
+                    },
+                ],
+            },
+            {
+                "id": 2,
+                "className": "mt-5 list-inside list-disc",
+                "ul": [
+                    {
+                        "id": 1,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-7",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Théâtre",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        "id": 2,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-6",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Dessin",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        "id": 3,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-6",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Animés",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        "id": 4,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-6",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Mangas",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        "id": 5,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-7",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Voyages",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                    {
+                        "id": 6,
+                        "className": "inline-block",
+                        "div": [
+                            {
+                                "id": 1,
+                                "className": "typewriter-22",
+                                "li": [
+                                    {
+                                        "id": 1,
+                                        "text": "Découvertes culinaires",
+                                    },
+                                ],
+                            },
+                        ],
+                    },
+                ],
+            },
+        ],
+    },
+]
+
+export const competences = [
+    {
+        "id": 1,
+        "logo": "/html5.png",
+        "sizeImg": 100,
+        "title": "HTML5",
+        "level": 16,
+    },
+    {
+        "id": 2,
+        "logo": "/css3.png",
+        "sizeImg": 100,
+        "title": "CSS3",
+        "level": 16,
+    },
+    {
+        "id": 3,
+        "logo": "/php.png",
+        "sizeImg": 100,
+        "title": "PHP",
+        "level": 14,
+    },
+    {
+        "id": 4,
+        "logo": "/javascript.png",
+        "sizeImg": 100,
+        "title": "Javascript",
+        "level": 14,
+    },
+    {
+        "id": 5,
+        "logo": "/mysql.png",
+        "sizeImg": 100,
+        "title": "MySQL",
+        "level": 12,
+    },
+    {
+        "id": 6,
+        "logo": "/bootstrap.png",
+        "sizeImg": 100,
+        "title": "Bootstrap",
+        "level": 14,
+    },
+    {
+        "id": 7,
+        "logo": "/react.png",
+        "sizeImg": 100,
+        "title": "React",
+        "level": 14,
+    },
+    {
+        "id": 8,
+        "logo": "/angular.png",
+        "sizeImg": 100,
+        "title": "Angular",
+        "level": 14,
+    },
+    {
+        "id": 9,
+        "logo": "/laravel.png",
+        "sizeImg": 100,
+        "title": "Laravel",
+        "level": 12,
+    },
+    {
+        "id": 10,
+        "logo": "/wordpress.png",
+        "sizeImg": 100,
+        "title": "WordPress",
+        "level": 14,
+    },
+    {
+        "id": 11,
+        "logo": "/figma.webp",
+        "sizeImg": 100,
+        "title": "Figma",
+        "level": 10,
+    },
+    {
+        "id": 12,
+        "logo": "/photoshop.png",
+        "sizeImg": 100,
+        "title": "Adobe Photoshop",
+        "level": 16,
+    },
+    {
+        "id": 13,
+        "logo": "/premiere_pro.png",
+        "sizeImg": 100,
+        "title": "Adobe Première Pro",
+        "level": 16,
+    },
+]
+
 export const diplomes = [
     {
         "id": 1,

@@ -8,7 +8,7 @@ export const ListHacktoberfest = ({hacktoberfests}) => {
     const renderHacktoberfest = (hacktoberfest) => {
         return (
             <div className="space-y-2">
-                <Image src={hacktoberfest.img} width={150} height={150} alt={hacktoberfest.title} className="p-2 bg-white rounded-lg"></Image>
+                <Image src={hacktoberfest.img} width={150} height={150} alt={hacktoberfest.title} className="p-2 bg-white rounded-lg" priority={false}/>
                 <h3 className="text-xl md:text-2xl">{hacktoberfest.title}</h3>
                 <p className="py-2">{hacktoberfest.date}</p>
                 {hacktoberfest.infos.map((info) => {

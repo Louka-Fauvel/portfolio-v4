@@ -8,7 +8,7 @@ export const ListVeille = ({veilles}) => {
     const renderVeille = (veille) => {
         return (
             <div className="space-y-2">
-                <Image src={veille.img} width={150} height={150} alt={veille.title} className="p-2 bg-white rounded-lg"></Image>
+                <Image src={veille.img} width={150} height={150} alt={veille.title} className="p-2 bg-white rounded-lg" priority={false}/>
                 <h3 className="text-xl md:text-2xl">{veille.title}</h3>
                 <p className="py-2">{veille.date}</p>
                 {veille.infos.map((info) => {

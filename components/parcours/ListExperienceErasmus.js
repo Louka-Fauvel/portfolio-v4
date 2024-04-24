@@ -7,7 +7,7 @@ export const ListExperienceErasmus = ({experiencesErasmus}) => {
     const renderExperienceErasmus = (experienceErasmus) => {
         return (
             <div className="space-y-2">
-                <Image src={experienceErasmus.img} width={150} height={150} alt={experienceErasmus.title} className="p-2 bg-white rounded-lg"/>
+                <Image src={experienceErasmus.img} width={150} height={150} alt={experienceErasmus.title} className="p-2 bg-white rounded-lg" priority={false}/>
                 <h3 className="text-xl md:text-2xl">{experienceErasmus.title}</h3>
                 <p className="py-2">{experienceErasmus.date}</p>
                 <p>{experienceErasmus.weeks}</p>

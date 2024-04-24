@@ -61,8 +61,8 @@ export const ListTableCert = ({certForms}) => {
         return (
             <div className="grid place-content-center space-y-4">
                 <h3 className="text-xl text-center md:text-2xl">{certForm.title}</h3>
-                <Image onClick={() => toggleModalCertForm(certForm.id)} src={certForm.img} width={500} height={500} alt={certForm.title} className="hidden md:block p-2 mx-auto bg-white rounded-lg border-2 border-white hover:border-red-600 cursor-pointer"/>
-                <Image onClick={() => toggleModalCertForm(certForm.id)} src={certForm.img} width={250} height={250} alt={certForm.title} className="md:hidden p-2 mx-auto bg-white rounded-lg border-2 border-white hover:border-red-600 cursor-pointer"/>
+                <Image onClick={() => toggleModalCertForm(certForm.id)} src={certForm.img} width={500} height={500} alt={certForm.title} className="hidden md:block p-2 mx-auto bg-white rounded-lg border-2 border-white hover:border-red-600 cursor-pointer" priority={true}/>
+                <Image onClick={() => toggleModalCertForm(certForm.id)} src={certForm.img} width={250} height={250} alt={certForm.title} className="md:hidden p-2 mx-auto bg-white rounded-lg border-2 border-white hover:border-red-600 cursor-pointer" priority={true}/>
             </div>
         )
     }
@@ -92,7 +92,7 @@ export const ListTableCert = ({certForms}) => {
 
                             {certForms.map((certForm) => {
                                 return(
-                                    <Image key={certForm.id} id={"modalCertForm" + certForm.id} src={certForm.img} width={900} height={900} alt={certForm.title} className="bg-white rounded-lg hidden"/>
+                                    <Image key={certForm.id} id={"modalCertForm" + certForm.id} src={certForm.img} width={900} height={900} alt={certForm.title} className="bg-white rounded-lg hidden" priority={true}/>
                                 )
                             })}
 

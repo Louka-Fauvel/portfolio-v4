@@ -9,8 +9,8 @@ export const ListExperience = ({experiences}) => {
             <div className="grid grid-cols-4 md:grid-cols-8 justify-items-center">
                 {imgs.map((img) => {
                     return (
-                        <div className="mt-auto mb-auto">
-                            <Image key={img.id} src={img.img} width={img.sizeImg} height={img.sizeImg} alt={img.alt} style={{objectFit:"contain"}}/>
+                        <div key={img.id} className="mt-auto mb-auto">
+                            <Image src={img.img} width={img.sizeImg} height={img.sizeImg} alt={img.alt} style={{objectFit:"contain"}} priority={false}/>
                         </div>
                     );
                 })}
@@ -21,7 +21,7 @@ export const ListExperience = ({experiences}) => {
     const renderExperience = (experience) => {
         return (
             <div className="space-y-2">
-                <Image src={experience.img} width={150} height={150} alt={experience.title} className="p-2 bg-white rounded-lg"/>
+                <Image src={experience.img} width={150} height={150} alt={experience.title} className="p-2 bg-white rounded-lg" priority={false}/>
                 <h3 className="text-lg md:text-xl">{experience.title}</h3>
                 <p className="py-2">{experience.date}</p>
                 <p>{experience.weeks}</p>
