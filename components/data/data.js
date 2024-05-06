@@ -1517,7 +1517,7 @@ export const projets = [
                         "sizeImg": 30
                     },
                     {
-                        "id": 5,
+                        "id": 6,
                         "img": "/img/icons/ubiquity.png",
                         "alt": "Ubiquity",
                         "sizeImg": 55
@@ -1614,6 +1614,25 @@ export const projets = [
                 "href": "https://github.com/Louka-Fauvel/siteperso",
                 "text": "2020 : Siteperso"
             }
+        ],
+        "design": [
+            {
+                "infos": "Création de logos pour mes portfolios sur Photoshop.",
+                "imgs": [
+                    {
+                        "id": 1,
+                        "img": "/img/logo_v1.png",
+                        "alt": "Logo v1",
+                        "sizeImg": 200,
+                    },
+                    {
+                        "id": 2,
+                        "img": "/img/logo.png",
+                        "alt": "Logo v2",
+                        "sizeImg": 200,
+                    }
+                ]
+            }
         ]
     },
     {
@@ -1648,7 +1667,8 @@ export const projets = [
             }
         ],
         "websiteHrefs": [],
-        "githubHrefs": []
+        "githubHrefs": [],
+        "design": []
     },
     {
         "id": 3,
@@ -1706,7 +1726,8 @@ export const projets = [
                 "href": "https://github.com/Louka-Fauvel/WebPOO",
                 "text": "WebPOO"
             }
-        ]
+        ],
+        "design": []
     },
     {
         "id": 4,
@@ -1758,19 +1779,20 @@ export const projets = [
                 "text": "Et Mes Ailes Cie"
             }
         ],
-        "githubHrefs": []
+        "githubHrefs": [],
+        "design": []
     },
     {
         "id": 5,
         "group": "perso",
-        "route": "manga-library",
-        "img": "/img/logo-manga-library.png",
+        "route": "boken-lib",
+        "img": "/img/logo-boken-lib.png",
         "sizeImg1": 250,
         "sizeImg2": 500,
         "video": "",
-        "title": "React Native - Manga Library",
+        "title": "React Native - Bōken Lib",
         "date": "Sortie prévue en juin 2024",
-        "objective": "Créer une application mobile sous forme de bibliothèque pour les mangas et animés",
+        "objective": "Créer une application mobile sous forme de bibliothèque pour les mangas",
         "listLanguagesTools": [
             {
                 "id": 1,
@@ -1798,6 +1820,41 @@ export const projets = [
             }
         ],
         "websiteHrefs": [],
-        "githubHrefs": []
+        "githubHrefs": [],
+        "design": [
+            {
+                "infos": "Création du logo sur Photoshop en choisissant un univers japonisant. " +
+                "Il représente une fleur de Sakura (cerisier japonais). " +
+                "Dans son coeur, comme un pistil, on trouve le mot livre écrit en Kanji qui ce prononce \"Hon\". " +
+                "Comme couleur dominante, j'ai choisi le rouge et le blanc, " +
+                "qui font référence aux couleurs du drapeau japonais. Le rose des pétales étant le mélange des deux. " +
+                "Mon logo pourra être utilisé sur un fond blanc ou noir.",
+                "imgs": [
+                    {
+                        "id": 1,
+                        "img": "/img/logo-boken-lib.png",
+                        "alt": "Logo Bōken Lib",
+                        "sizeImg": 200,
+                    }
+                ]
+            }
+        ]
+    }
+]
+
+export const projetsLogos = [
+    {
+        "id": 1,
+        "route": "sitepersos#logos",
+        "img": "/img/logo.png",
+        "title": "Portfolio",
+        "sizeImg1": 250,
+    },
+    {
+        "id": 2,
+        "route": "boken-lib#logos",
+        "img": "/img/logo-boken-lib.png",
+        "title": "Bōken Lib",
+        "sizeImg1": 250,
     }
 ]

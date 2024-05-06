@@ -36,12 +36,11 @@ export default async function Page() {
             <div className="md:container md:mx-auto px-5 md:px-32 lg:px-0">
                 <div className="flex flex-col mt-16">
                     <h1 className="mb-5 text-4xl md:text-7xl">Louka Fauvel</h1>
-                    <h1 className="mt-5 text-lg md:text-3xl"><span className="glitch layers" data-text="Développeur web & Designer"><span>Développeur web & Designer</span></span></h1>
-                    <h1 className="mt-5 text-base md:text-2xl">Recherche une alternance en communication digitale (bac+3)</h1>
-                    <h1 className="mt-5 lg:mr-72 text-xs md:text-base text-right"><i>Faire de ma passion mon métier</i></h1>
+                    <h1 className="mt-5 text-lg md:text-3xl"><span className="glitch layers" data-text="Développeur web & Designer"><span>Développeur web & Webdesigner</span></span></h1>
+                    <h1 className="mt-16 text-xs md:text-base text-center"><i>"Faire de ma passion mon métier"</i></h1>
                 </div>
                 
-                <div className="md:mt-16 md:mx-16">
+                <div className="md:mx-16">
 
                     <div className="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 gap-2">
                         <div className="row-start-1 lg:col-start-1 place-self-center">
@@ -52,9 +51,8 @@ export default async function Page() {
                                     je souhaite aujourd'hui faire de ma passion mon métier.
                                     Après un BTS SIO option Slam,
                                     je termine actuellement mon diplôme de Concepteur Développeur d'Application (bac+3). 
-                                    J'ai décidé d'enrichir mes compétences en design à la rentrée de septembre 2024 et 
-                                    je recherche activement une alternance. De nature sérieuse,
-                                    j'apprécie travailler en équipe sur de nouveaux projets.
+                                    J'ai décidé d'enrichir mes compétences en design à la rentrée de septembre 2024. 
+                                    De nature sérieuse, j'apprécie travailler en équipe sur de nouveaux projets.
                                 </span>
                             </p>
 

@@ -135,6 +135,24 @@ export default async function Page({ params }) {
                                 ))}
                             </div>
                         </div>
+
+                        {projet.design.length > 0 &&
+                            <div id="logos" className="mb-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl col-start-1 lg:col-span-2 lg:col-start-1">
+                                {
+                                    projet.design[0].imgs.length > 1
+                                        ? <h2 className="text-2xl md:text-4xl">Logos :</h2>
+                                        : <h2 className="text-2xl md:text-4xl">Logo :</h2>
+                                }
+                                <p className="py-4">{projet.design[0].infos}</p>
+                                <div className="grid grid-cols-4 md:grid-cols-8 justify-items-center">
+                                    {projet.design[0].imgs.map((img) => (
+                                        <div key={img.id} className="mt-auto mb-auto">
+                                            <Image src={img.img} width={img.sizeImg} height={img.sizeImg} alt={img.alt} priority={false}/>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
             </div>

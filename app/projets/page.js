@@ -10,11 +10,14 @@ async function getData() {
     const URL = process.env.URL;
 
     let letProjets = [];
+    let letProjetsLogos = [];
 
     if(URL) {
 
         const resProjets = await fetch(URL+'/api/projets', { next: { revalidate: 10 } });
         letProjets = await resProjets.json();
+        const resProjetsLogos = await fetch(URL+'/api/projetsLogos', { next: { revalidate: 10 } });
+        letProjetsLogos = await resProjetsLogos.json();
         
     }
 
@@ -49,11 +52,14 @@ async function getData() {
         }
     });
 
+    const projetsLogos = await letProjetsLogos;
+
     return {
         groupPro,
         groupPerso,
         groupSchool,
-        groupTuto
+        groupTuto,
+        projetsLogos
     }
 
 }
@@ -70,6 +76,8 @@ export default async function Page() {
                     <ListProjet projets={data.groupPro}/>
                     <h2 className="mt-10 text-2xl md:text-4xl">Projets personnels</h2>
                     <ListProjet projets={data.groupPerso}/>
+                    <h2 className="mt-10 text-2xl md:text-4xl">Logos</h2>
+                    <ListProjet projets={data.projetsLogos}/>
                     <h2 className="mt-10 text-2xl md:text-4xl">Tutos</h2>
                     <ListProjet projets={data.groupTuto}/>
                 </div>
