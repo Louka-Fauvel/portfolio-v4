@@ -16,6 +16,7 @@ export const FormContact = ({CAPTCHAID, URL}) => {
                         placeholder="Votre prénom"
                         name="prenom"
                         required
+                        disabled
                     />
                 </div>
                 <div className="col-start-1 lg:row-start-1 lg:col-start-2">
@@ -26,6 +27,7 @@ export const FormContact = ({CAPTCHAID, URL}) => {
                         placeholder="Votre nom"
                         name="nom"
                         required
+                        disabled
                     />
                 </div>
                 <div className="col-start-1 lg:row-start-2 lg:col-span-2">
@@ -36,6 +38,7 @@ export const FormContact = ({CAPTCHAID, URL}) => {
                         placeholder="Votre email"
                         name="email"
                         required
+                        disabled
                     />
                 </div>
                 <div className="col-start-1 lg:row-start-3 lg:col-span-2">
@@ -46,10 +49,11 @@ export const FormContact = ({CAPTCHAID, URL}) => {
                         placeholder="Votre message"
                         name="message"
                         required
+                        disabled
                     ></textarea>
                 </div>
                 <div className="col-start-1 lg:row-start-6 lg:col-span-2">
-                    <button id="contactForm" className="block w-full p-2 bg-red-500 rounded-lg hover:bgColorRed disabled:opacity-50 disabled:hover:bg-red-500">Envoyer</button>
+                    <button id="contactForm" disabled className="block w-full p-2 bg-red-500 rounded-lg hover:bgColorRed disabled:opacity-50 disabled:hover:bg-red-500">Envoyer</button>
                 </div>
             </div>
         </form>

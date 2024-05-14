@@ -1,12 +1,13 @@
 import { mailOptions, transporter } from "@/components/contact/config/nodemailer";
+import { NextResponse } from "next/server";
 
 export async function POST(req) {
 
   if (req.method === 'POST') {
 
-    const data = await req.json();
 
     try {
+      const data = await req.json();
 
       await transporter.sendMail({
         ...mailOptions,
@@ -19,7 +20,7 @@ export async function POST(req) {
 
     } catch (error) {
       
-      return new Error(error.message);
+      return NextResponse.json({ error: error.message }, { status: 400 });
 
     }
   }

@@ -42,7 +42,7 @@ export default async function Page() {
         <>
             <div className="md:container md:mx-auto px-5 md:px-32 lg:px-48">
                 <div className="mt-16">
-                    <h1 className="text-2xl md:text-4xl">Contact</h1>
+                    <h1 className="text-2xl md:text-4xl">Contact <br/><span className="glitch layers" data-text="(En maintenance)"><span>(En maintenance)</span></span></h1>
                     <div className="mt-5 p-8 border-4 border-gray-900 bg-gray-800 rounded-3xl">
                         <FormContact CAPTCHAID={CAPTCHAID} URL={URL}/>
                     </div>
