@@ -58,7 +58,8 @@ const listImgs = (imgs) => {
 
 export default async function Page({ params }) {
 
-    const projet = (await getData(params.route)).projet;
+    const {route} = await params
+    const projet = (await getData(route)).projet;
 
     if (!projet) {
         notFound();

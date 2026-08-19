@@ -667,6 +667,43 @@ export const experiences = [
         ],
         "languages": "",
         "tools": []
+    },
+    {
+        "id": 6,
+        "img": "/img/logo_ai.png",
+        "title": "Lieu intermédiaire de création, d'exploration et d'élaboration artistique et collective",
+        "date": "Septembre 2024 - juillet 2025",
+        "weeks": "10 mois",
+        "country": "Caen, Normandie",
+        "description": "Refonte du site de l'association avec Wordpress. Mise à jour de la newsletter.",
+        "languagesTools": [
+            {
+                "id": 1,
+                "img": "/img/icons/wordpress.png",
+                "alt": "Wordpress",
+                "sizeImg": 50
+            },
+            {
+                "id": 2,
+                "img": "/img/icons/css3.png",
+                "alt": "CSS",
+                "sizeImg": 30
+            },
+            {
+                "id": 3,
+                "img": "/img/icons/php.png",
+                "alt": "PHP",
+                "sizeImg": 40
+            },
+            {
+                "id": 4,
+                "img": "/img/icons/tailwind_css.png",
+                "alt": "Tailwind CSS",
+                "sizeImg": 50
+            }
+        ],
+        "languages": "",
+        "tools": []
     }
 ]
 
@@ -1839,6 +1876,59 @@ export const projets = [
                 ]
             }
         ]
+    },
+    {
+        "id": 6,
+        "group": "pro",
+        "route": "ateliersintermediaires",
+        "img": "/img/ai_accueil.png",
+        "sizeImg1": 500,
+        "sizeImg2": 1000,
+        "video": "",
+        "title": "Wordpress - Les Ateliers Intermédiaires",
+        "date": "Septembre 2024 - juillet 2025",
+        "objective": "Faire la refonte du site de l'association sous Wordpress.",
+        "listLanguagesTools": [
+            {
+                "id": 1,
+                "text": "",
+                "languagesTools": [
+                    {
+                        "id": 1,
+                        "img": "/img/icons/wordpress.png",
+                        "alt": "Wordpress",
+                        "sizeImg": 50
+                    },
+                    {
+                        "id": 2,
+                        "img": "/img/icons/css3.png",
+                        "alt": "CSS",
+                        "sizeImg": 30
+                    },
+                    {
+                        "id": 3,
+                        "img": "/img/icons/php.png",
+                        "alt": "PHP",
+                        "sizeImg": 40
+                    },
+                    {
+                        "id": 4,
+                        "img": "/img/icons/tailwind_css.png",
+                        "alt": "Tailwind CSS",
+                        "sizeImg": 50
+                    }
+                ]
+            }
+        ],
+        "websiteHrefs": [
+            {
+                "id": 1,
+                "href": "https://www.ateliersintermediaires.org",
+                "text": "Les Ateliers Intermédiaires"
+            }
+        ],
+        "githubHrefs": [],
+        "design": []
     }
 ]
 
